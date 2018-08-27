@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+
+import List from './List';
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      message: 'Loading...',
+      todos: [],
     };
   }
 
   componentDidMount() {
-    axios.get('/api')
-      .then(({ data: { message } }) => {
-        this.setState({
-          message,
-        });
-      });
+    fetch('/api/todos')
+      .then(res => res.json())
+      .then(todos => this.setState({ todos }));
   }
 
   render() {
-    const { message } = this.state;
+    const { todos } = this.state;
 
-    return <div>{message}</div>;
+    return todos.length
+      ? <List todos={todos} />
+      : <div>No todos to do!</div>;
   }
 }
 
