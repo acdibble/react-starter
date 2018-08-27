@@ -5,7 +5,7 @@ import Todo from './Todo';
 
 const List = (props) => {
   const { todos } = props;
-  const todoItems = todos.map(({ id, task }) => <Todo key={id} task={task} />);
+  const todoItems = todos.map(({ rowid, task }) => <Todo key={rowid} task={task} />);
 
   return (
     <ul>
