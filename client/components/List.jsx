@@ -7,11 +7,7 @@ const List = (props) => {
   const { todos } = props;
   const todoItems = todos.map(({ rowid, task }) => <Todo key={rowid} task={task} />);
 
-  return (
-    <ul>
-      {todoItems}
-    </ul>
-  );
+  return <ul>{todoItems}</ul>;
 };
 
 List.propTypes = {

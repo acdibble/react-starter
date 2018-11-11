@@ -10,10 +10,7 @@ const db = new sqlite3.Database(`${__dirname}/../todos.db`, (err) => {
 });
 
 const getTodos = () => new Promise((resolve, reject) => {
-  db.all('SELECT rowid, * FROM todos', (err, rows) => {
-    if (err) return reject(err);
-    return resolve(rows);
-  });
+  db.all('SELECT rowid, * FROM todos', (err, rows) => (err ? reject(err) : resolve(rows)));
 });
 
 module.exports = {
