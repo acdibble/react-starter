@@ -48,6 +48,10 @@ The server uses the Express library to serve up the static files and includes
 one internal API route which is used to fetch todos from the database and
 return them back to the front end.
 
+Why not Babel on the server? Just because it's not strictly necessary. There
+is only one Node environment you have to worry about, so unless you want to
+use bleeding-edge JS proposal features, it's an unnecessary complexity.
+
 ## Tasks
 
 There are some tasks that can be accomplished with what is already in place.
