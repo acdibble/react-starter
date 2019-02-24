@@ -1,29 +1,21 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import List from './List';
 
-class App extends Component {
-  constructor() {
-    super();
+function App() {
+  const [todos, setTodos] = useState([]);
 
-    this.state = {
-      todos: [],
-    };
-  }
-
-  componentDidMount() {
+  useEffect(() => {
     fetch('/api/todos')
       .then(res => res.json())
-      .then(todos => this.setState({ todos }));
-  }
+      .then((todosFromDb) => {
+        setTodos(todosFromDb);
+      });
+  }, []);
 
-  render() {
-    const { todos } = this.state;
-
-    return todos.length
-      ? <List todos={todos} />
-      : <div>No todos to do!</div>;
-  }
+  return todos.length
+    ? <List todos={todos} />
+    : <div>No todos to do!</div>;
 }
 
 export default App;

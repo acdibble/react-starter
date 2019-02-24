@@ -3,6 +3,9 @@
     "env": {
         "node": true
     },
+    "plugins": [
+        "react-hooks"
+    ],
     "rules": {
         "no-console": "off"
     }
