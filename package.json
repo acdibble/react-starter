@@ -6,34 +6,34 @@
   "scripts": {
     "build": "rm -rf dist && parcel build client/index.html",
     "client-dev": "node dev-server.js",
-    "server-dev": "nodemon server -r dotenv/config",
+    "server-dev": "nodemon --watch server server -r dotenv/config",
     "start": "node server -r dotenv/config"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.3.3",
-    "@babel/preset-env": "^7.3.1",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.0",
-    "eslint": "^5.14.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-react-hooks": "^1.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "http-proxy-middleware": "^0.19.1",
-    "nodemon": "^1.18.3",
+    "nodemon": "^1.18.11",
     "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "dotenv": "^6.1.0",
-    "express": "^4.16.3",
-    "prop-types": "^15.6.2",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "sqlite3": "^4.0.2"
+    "bluebird": "^3.5.4",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sqlite3": "^4.0.6"
   }
 }
