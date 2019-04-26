@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build client/index.html",
-    "client-dev": "parcel client/index.html",
+    "build": "rm -rf dist && parcel build client/index.html",
+    "client-dev": "node dev-server.js",
     "server-dev": "nodemon server -r dotenv/config",
     "start": "node server -r dotenv/config"
   },
@@ -23,6 +23,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-react-hooks": "^1.2.0",
+    "http-proxy-middleware": "^0.19.1",
     "nodemon": "^1.18.3",
     "parcel-bundler": "^1.12.3"
   },
