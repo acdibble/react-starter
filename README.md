@@ -36,8 +36,8 @@ the SQLite3 command line shell.
 
 ## The client
 
-The front end is built on React 16, Babel 7, and Webpack 4. Linting standards
-are enforced according to the Airbnb styleguide.
+The front end is built on React 16, Babel 7, and Parcel. Linting standards are
+enforced according to the Airbnb styleguide.
 
 There is a basic structure in place for displaying todos from the database as
 an example of how to pass props down through multiple component levels.

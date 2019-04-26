@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
-    "client-dev": "webpack --watch -d",
+    "build": "parcel build client/index.html",
+    "client-dev": "parcel client/index.html",
     "server-dev": "nodemon server -r dotenv/config",
     "start": "node server -r dotenv/config"
   },
@@ -24,8 +24,7 @@
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-react-hooks": "^1.2.0",
     "nodemon": "^1.18.3",
-    "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0"
+    "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
