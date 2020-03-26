@@ -23,7 +23,7 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-react-hooks": "^1.6.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
     "http-proxy-middleware": "^0.19.1",
     "nodemon": "^1.18.11",
     "parcel-bundler": "^1.12.4",
